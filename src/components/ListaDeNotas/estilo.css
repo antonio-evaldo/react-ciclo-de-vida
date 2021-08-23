@@ -1,0 +1,11 @@
+.lista-notas {
+  flex: 2;
+
+  padding: 30px 50px 0;
+  border-left: 2px solid var(--gray);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  row-gap: 30px;
+}

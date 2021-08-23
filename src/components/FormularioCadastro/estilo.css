@@ -1,0 +1,35 @@
+.formulario-cadastro {
+  padding: 30px 50px 0;
+
+  flex: 1;
+}
+
+.formulario-cadastro input,
+.formulario-cadastro textarea {
+  width: 100%;
+
+  background-color: var(--gray);
+  border: 0;
+  border-radius: 5px;
+
+  padding: 8px;
+  margin-bottom: 16px;
+}
+
+.formulario-cadastro .button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.formulario-cadastro .button-container button {
+  width: 180px;
+  padding: 6px;
+  font-size: 0.95em;
+  
+  border: 0;
+  border-radius: 5px;
+  background-color: var(--dark-blue);
+  color: white;
+}
