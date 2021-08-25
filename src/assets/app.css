@@ -15,9 +15,15 @@ html, input, textarea {
 }
 
 .conteudo {
-  height: 100vh;
+  min-height: 100vh;
 
   display: flex;
   justify-content: flex-start;
   align-items: stretch;
+}
+
+.conteudo-principal {
+  border-left: 2px solid var(--gray);
+
+  flex: 5;
 }
