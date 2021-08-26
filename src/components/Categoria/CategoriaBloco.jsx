@@ -1,7 +1,7 @@
 import { Component } from "react";
 import "./estilo.css";
 
-class Categoria extends Component {
+class CategoriaBloco extends Component {
   render() {
     return (
       <div
@@ -18,4 +18,4 @@ class Categoria extends Component {
   }
 }
 
-export default Categoria;
+export default CategoriaBloco;

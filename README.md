@@ -47,4 +47,12 @@ Sometimes when we have a `state` information, we may want to *show* or *access* 
 * We made a reflection on the project design
 * We changed a category representation
 * Separation between data and visualization and what are tha advantages of this approach
-* Problems with project rendering and optimization.
+* Problems with design rendering and optimization.
+
+## Module 4
+
+* Why it's good to remove the `state` on high hierarchy components
+* Why do we need a source data
+* Separating data from rendering
+* *Observable* design pattern
+* Advantages of makign dependencies injection

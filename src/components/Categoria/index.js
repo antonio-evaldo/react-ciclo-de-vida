@@ -1,3 +1,3 @@
-import Categoria from "./Categoria";
+import CategoriaBloco from "./CategoriaBloco";
 
-export default Categoria;
+export default CategoriaBloco;
