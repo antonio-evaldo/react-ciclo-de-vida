@@ -6,6 +6,7 @@ class FormularioCadastro extends Component {
     super(props);
     this.titulo = "";
     this.texto = "";
+    this.categoria = "Sem categoria";
   }
 
   _handleMudancaTitulo(event) {
@@ -18,6 +19,11 @@ class FormularioCadastro extends Component {
     this.texto = event.target.value;
   }
 
+  _handleMudancaCategoria(event) {
+    event.stopPropagation();
+    this.categoria = event.target.value;
+  }
+
   _handleResetarForm() {
     this.titulo = "";
     this.texto = "";
@@ -27,10 +33,10 @@ class FormularioCadastro extends Component {
     event.preventDefault();
     event.stopPropagation();
 
-    this.props.criarNota(this.titulo, this.texto);
+    this.props.criarNota(this.titulo, this.texto, this.categoria);
 
-    const form = event.target;
-    form.reset();
+    // const form = event.target;
+    // form.reset();
   }
 
   render() {
@@ -40,17 +46,32 @@ class FormularioCadastro extends Component {
         onSubmit={this._criarNota.bind(this)}
         onReset={this._handleResetarForm.bind(this)}
       >
+        <select
+          defaultValue=""
+          onChange={this._handleMudancaCategoria.bind(this)}
+        >
+          <option value="" disabled hidden>
+            Selecione uma categoria
+          </option>
+
+          {this.props.categorias.map((categoria, index) => (
+            <option key={index} value={categoria}>
+              {categoria}
+            </option>
+          ))}
+        </select>
+
         <input
           type="text"
           placeholder="Título"
-          onChange={this._handleMudancaTitulo.bind(this)}
+          onInput={this._handleMudancaTitulo.bind(this)}
           autoFocus
         />
 
         <textarea
           placeholder="Escreva sua nota..."
           rows={10}
-          onChange={this._handleMudancaTexto.bind(this)}
+          onInput={this._handleMudancaTexto.bind(this)}
         />
 
         <div className="button-container">

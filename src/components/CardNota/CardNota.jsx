@@ -1,6 +1,8 @@
 import { Component } from "react";
-import "./estilo.css";
+import Categoria from "../Categoria/Categoria";
 import {ReactComponent as DeleteSVG} from "../../assets/img/delete.svg";
+
+import "./estilo.css";
 
 class CardNota extends Component {
   apagar() {
@@ -15,6 +17,11 @@ class CardNota extends Component {
           <h3 className="card-nota_titulo">{this.props.titulo}</h3>
           <DeleteSVG onClick={this.apagar.bind(this)} />
         </header>
+
+        <Categoria categoriaDoCard>
+          {this.props.categoria}
+        </Categoria>
+        
         <p className="card-nota_texto">{this.props.texto}</p>
       </section>
     );
